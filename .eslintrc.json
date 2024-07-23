@@ -1,0 +1,50 @@
+{
+  "ignorePatterns": ["*.config.ts", "*.test.tsx", "*.stories.tsx"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "love",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", ".js", ".jsx"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "rules": {
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "never"],
+        "react/react-in-jsx-scope": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-invalid-void-type": 0,
+        "@typescript-eslint/no-non-null-assertion": 0,
+        "@typescript-eslint/strict-boolean-expressions": 0
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

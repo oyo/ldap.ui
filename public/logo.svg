@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+<defs>
+<style>.c0{fill:#cc8822;}.l0{stroke:#cc8822;stroke-width:2;fill:none;}</style>
+<g id="user">
+    <circle class="c0" cx="5" cy="2.5" r="3" />
+    <path class="c0" d="M12,12 a6,7 0 0,0 -12,0" />
+</g>
+</defs>
+<g>
+<use href="#user" transform="translate(20, 4)"/>
+<use href="#user" transform="translate(4, 31)"/>
+<use href="#user" transform="translate(20, 31)"/>
+<use href="#user" transform="translate(36, 31)"/>
+<g>
+    <path class="l0" d="m9,27 l0,-4 l32,0 l0,4" />
+    <path class="l0" d="m25,19 l0,8" />
+</g>
+</g>
+</svg>

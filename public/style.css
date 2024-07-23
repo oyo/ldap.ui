@@ -1,0 +1,81 @@
+body,
+input,
+textarea {
+  font-size: 1.2rem;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+    'DejaVu Sans Mono', monospace;
+}
+
+body,
+#app,
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+select {
+  width: 6rem;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+}
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0 0.5rem;
+}
+
+div.navigation {
+  margin: 1rem 0.2rem;
+}
+
+a.dn-value {
+  margin: 0 0.2rem;
+  color: #0040a0;
+  text-decoration: none;
+}
+
+a.dn-value::before {
+  margin: 0 0.2rem;
+  content: '/';
+  color: #e0e0e0;
+}
+
+a.dn-value:hover::before {
+  margin: 0 0.2rem;
+  content: '‣';
+  color: #0040a0;
+}
+
+.options {
+  font-size: 0.8rem;
+}
+
+span.att {
+  margin: 0.2rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #c0c0c0;
+}
+
+span.att::after {
+  content: '=';
+  color: #e0e0e0;
+}
+
+.result-count {
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.warn {
+  color: red;
+}
