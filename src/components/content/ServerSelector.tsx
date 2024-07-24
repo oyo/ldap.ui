@@ -7,6 +7,7 @@ export default function ServerSelector() {
   const dispatch = useDispatch()
   return (
     <select onChange={(e) => dispatch(selectServer(e.target.value))}>
+      <option value="">{'-choose-'}</option>
       {data?.map((server) => (
         <option key={server} value={server}>
           {server}
