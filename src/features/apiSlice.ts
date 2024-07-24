@@ -3,12 +3,12 @@ import { type LdapSearchRequest, type LdapSearchResult } from 'types/Types'
 
 export const ldapApi = createApi({
   reducerPath: 'ldapApi',
-  baseQuery: fetchBaseQuery({ baseUrl: '/ldap/search' }),
+  baseQuery: fetchBaseQuery({ baseUrl: '/ldap/api/search' }),
   endpoints: (builder) => ({
     getLdapServers: builder.query<string[], void>({
       query: () => '/',
       transformResponse: (response: string[]) =>
-        response.map((server) => server.split('/')[3]),
+        response.map((server) => server.split('/').pop() ?? ''),
     }),
     search: builder.query<LdapSearchResult, LdapSearchRequest>({
       query: ({ server, params }) =>

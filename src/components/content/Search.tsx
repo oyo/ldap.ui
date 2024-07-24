@@ -17,11 +17,7 @@ export default function Search() {
         {data?.params && <DNItem dn={data.params.base ?? ''} />}
         {data?.result && <ResultCount count={data.result.length} />}
       </div>
-      {data?.result && (
-        <div>
-          <SearchOutput data={data} />
-        </div>
-      )}
+      {data?.result && <SearchOutput data={data} />}
     </>
   )
 }

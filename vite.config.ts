@@ -11,7 +11,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/ldap/search': {
+      '/ldap/api': {
         target: 'http://127.0.0.1:8001/',
       },
     },
