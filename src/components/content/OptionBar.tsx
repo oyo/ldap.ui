@@ -1,14 +1,28 @@
-import { toggleDNAttribute } from 'features/optionSlice'
+import type { UnknownAction } from '@reduxjs/toolkit'
+import { toggleDNAttribute, toggleJsonOutput } from 'features/optionSlice'
 import { useDispatch } from 'react-redux'
 
-export default function OptionBar() {
+const OptionItem = ({
+  label,
+  action,
+}: {
+  label: string
+  action: () => UnknownAction
+}) => {
   const dispatch = useDispatch()
   return (
+    <span className="options">
+      <input type="checkbox" onChange={() => dispatch(action())} />
+      {label}
+    </span>
+  )
+}
+
+export default function OptionBar() {
+  return (
     <div>
-      <span className="options">
-        <input type="checkbox" onChange={() => dispatch(toggleDNAttribute())} />
-        {'Show DN Attribute'}
-      </span>
+      <OptionItem label="Show DN Attribute" action={toggleDNAttribute} />
+      <OptionItem label="Show Output as JSON" action={toggleJsonOutput} />
     </div>
   )
 }

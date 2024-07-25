@@ -1,7 +1,7 @@
 import type { LdapSearchResult } from 'types/Types'
-import DNValueItem from './DNValueItem'
+import DNValueItem from '../../basic/DNValueItem'
 
-export default function SearchOutput({ data }: { data: LdapSearchResult }) {
+export default function DNListOutput({ data }: { data: LdapSearchResult }) {
   return (
     <ul>
       {data.result

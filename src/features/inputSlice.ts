@@ -26,12 +26,25 @@ export const inputSlice = createSlice({
     setParams: (state, action: PayloadAction<LdapSearchParams>) => {
       state.params = action.payload
     },
+    resetParams: (state, action: PayloadAction<LdapSearchParams>) => {
+      state.params = {
+        ...initialState.params,
+        ...action.payload,
+      }
+    },
+    updateParams: (state, action: PayloadAction<LdapSearchParams>) => {
+      state.params = {
+        ...state.params,
+        ...action.payload,
+      }
+    },
   },
 })
 
 export const inputSelector = (state: RootState): LdapSearchRequest =>
   state.input
 
-export const { selectServer, setBase, setParams } = inputSlice.actions
+export const { selectServer, setBase, setParams, resetParams, updateParams } =
+  inputSlice.actions
 
 export default inputSlice.reducer

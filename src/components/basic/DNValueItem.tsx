@@ -1,4 +1,4 @@
-import { setBase } from 'features/inputSlice'
+import { resetParams } from 'features/inputSlice'
 import { optionSelector } from 'features/optionSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -14,7 +14,7 @@ function DNValueItem({ dn, base }: { dn: string; base: string }) {
       className="dn-value"
       href={`#${fullDn}`}
       onClick={() => {
-        dispatch(setBase(fullDn))
+        dispatch(resetParams({ base: fullDn }))
       }}
     >
       {showDNAttribute && <span className="att">{att}</span>}

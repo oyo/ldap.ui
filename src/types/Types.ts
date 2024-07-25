@@ -7,7 +7,7 @@ export interface LdapSearchParams {
   attributes?: string[]
 }
 
-export interface LdapSearchResultItem {
+export type LdapSearchResultItem = Record<string, string | string[]> & {
   dn: string
 }
 
@@ -23,4 +23,5 @@ export interface LdapSearchResult {
 
 export interface ViewOptions {
   showDNAttribute: boolean
+  showJsonOutput: boolean
 }

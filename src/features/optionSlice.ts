@@ -4,6 +4,7 @@ import type { RootState } from 'features/store'
 
 const initialState: ViewOptions = {
   showDNAttribute: false,
+  showJsonOutput: false,
 }
 
 export const optionSlice = createSlice({
@@ -13,11 +14,14 @@ export const optionSlice = createSlice({
     toggleDNAttribute: (state) => {
       state.showDNAttribute = !state.showDNAttribute
     },
+    toggleJsonOutput: (state) => {
+      state.showJsonOutput = !state.showJsonOutput
+    },
   },
 })
 
 export const optionSelector = (state: RootState): ViewOptions => state.option
 
-export const { toggleDNAttribute } = optionSlice.actions
+export const { toggleDNAttribute, toggleJsonOutput } = optionSlice.actions
 
 export default optionSlice.reducer

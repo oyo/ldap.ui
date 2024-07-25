@@ -14,7 +14,13 @@ export const ldapApi = createApi({
       query: ({ server, params }) =>
         server
           ? {
-              url: `/${server}/${params.base ?? '_'}/${params.scope}/${params.filter ?? '_'}/${params.attributes?.join(',') ?? '_'}`,
+              url: `/${server}/${params.base ?? '_'}/${params.scope}/${
+                params.filter ?? '_'
+              }/${
+                !params.attributes || params.attributes.length === 0
+                  ? '_'
+                  : params.attributes.join(',')
+              }`,
             }
           : '/',
     }),

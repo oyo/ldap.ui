@@ -25,6 +25,14 @@ select {
   background-color: #f0f0f0;
 }
 
+th {
+  padding-right: 1rem;
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #c0c0c0;
+}
+
 ul {
   list-style-type: none;
   margin-block-start: 0;
